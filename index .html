@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Merssa Gutlay] | CS Student Portfolio</title>
+    <meta name="color-scheme" content="HotPink-LightPink">
+    <meta name="theme-color" content="#FF69B4">
+    <meta name="description"
+        content="Portfolio of Merrsa Gutlay, an CS student learning web development and technology.">
+
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Marks the page as "JavaScript is on". The CSS uses this so the site still works without JavaScript. -->
+    <script>
+        document.documentElement.classList.add('js');
+        // Safety net: if script.js did not load (wrong name, not saved, or an error),
+        // show all the content anyway instead of leaving the page empty.
+        setTimeout(function () {
+            if (!document.documentElement.classList.contains('js-ready')) {
+                document.documentElement.classList.remove('js');
+            }
+        }, 2500);
+    </script>
+</head>
+
+<body>
+
+    <!-- ===================== UNIVERSE BACKGROUND =====================
+       Fixed behind everything. Stars, glowing clouds and a hologram planet
+       move when you scroll (see "UNIVERSE BACKGROUND" in script.js). -->
+    <div class="cosmos" aria-hidden="true">
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <canvas id="universe"></canvas>
+        <div class="holo-grid"></div>
+    </div>
+
+
+    <a class="skip-link" href="#home">Skip to main content</a>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="brand">My<span>Portfolio</span></a>
+
+            <!-- Hamburger button (only shown on small screens when JavaScript is on) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-tip="Go to Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-tip="Learn about me">About</a></li>
+                <li><a href="#projects" class="nav-link" data-tip="See my projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-tip="See my certificates">Certificates</a></li>
+                <li><a href="#ojt" class="nav-link" data-tip="See my OJT experience">OJT</a></li>
+                <li><a href="#skills" class="nav-link" data-tip="See my skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-tip="Contact me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== A. HOME / INTRODUCTION ===================== -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Hello, I am</p>
+                    <!-- EDIT: replace with your full name -->
+                    <h1>Merrsa H. Gutlay</h1>
+                    <!-- EDIT: replace with your course and school -->
+                    <p class="hero-role">BSCS Student &bull; Sorsogon State University-Bulan Campus</p>
+                    <!-- EDIT: change this introduction to your own words -->
+                    <p class="hero-intro">
+                        I am an Computer Science student who is stll learning and improving my skills in programming. I may have weaknesses,but I am willing to learn, grow, and continue improving.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <!-- EDIT: put your picture in the images folder and name it profile.jpg -->
+                    <img src="images/profile.jpg" alt="Profile photo of Merrsa Gutlay"
+                        data-placeholder="Add your photo: images/profile.jpg" width="320" height="320">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ME ===================== -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <p class="section-note reveal">
+                A dedicated CS student passionate about continuous learning, with skills in software development, web technologies, and problem-solving.
+                    
+                </p>
+
+                <div class="about-grid">
+
+                    <!-- Left: story about you -->
+                    <article class="card about-story reveal">
+                        <div class="card-body">
+                            <h3>Who I Am</h3>
+                            <!-- EDIT: write 2 or 3 short paragraphs about yourself in your own words -->
+                            <p>
+                                I am Merrsa Gutlay, a BSCS student at Sorsogon State University-Bulan Campus.
+                            
+                            </p>
+                            <p>
+                                I'm on a continous learning journey to understand web development and technology.
+                                By building small projects and experimenting with different tools.
+                                I hope to steadily improve my problem-solving skills, and write more thoughfull code.
+                            </p>
+
+                            <h4>My Goals</h4>
+                            <ul>
+                                <li>keep learning by doings</li>
+                                <li>Build a strong foundation</li>
+                                <li>Become a dependable team player</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Right: quick facts and interests -->
+                    <article class="card about-facts reveal">
+                        <div class="card-body">
+                            <h3>Quick Facts</h3>
+                            <dl class="facts">
+                                <div>
+                                    <dt>Name</dt>
+                                    <dd>Merrsa Gutlay</dd>
+                                </div>
+                                <div>
+                                    <dt>Course</dt>
+                                    <dd>BSCS</dd>
+                                </div>
+                                <div>
+                                    <dt>School</dt>
+                                    <dd>Sorsogon State University-BC</dd>
+                                </div>
+                                <div>
+                                    <dt>Year Level</dt>
+                                    <dd>4TH year</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Philippines</dd>
+                                </div>
+                                <div>
+                                    <dt>Languages</dt>
+                                    <dd> Filipino </dd>
+                                </div>
+                            </dl>
+
+                            <h4>My Interests</h4>
+                            <div class="tags">
+                                <span class="tag">Programming</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Problem-Solving</span>
+                                <span class="tag">Learning New Tools</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== B. MY PROJECTS ===================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">My Projects</h2>
+                <p class="section-note reveal">
+                    A collection of academic and personal web project showcasing my continuous learning and skills in software development.
+                   
+                </p>
+
+                <div class="card-grid">
+
+                    <!-- PROJECT CARD 1 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/project-1.png" alt="Screenshot of Project 1"
+                            data-placeholder="Add screenshot: images/project-1.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>merrsa-gutlay-lab-1</h3>
+                            <p>This is a foundational web project containing essential documents and a basic web page structure. It is designed to demonstrate the fundamentals of building a simple website using HTML and organizing project files on GitHub.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Responsive HTML web page layout</li>
+                                <li>Feature tracking documentation</li>
+                                <li>Project documentation and description</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Markdown</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>I learned how to properly set up a respiratory on GitHub, create essential docuementaion like a README, and initiate basic web page structure using HTML</p>
+                            <!-- EDIT: put your real link in href and delete the class "is-placeholder". If you have no link, delete this whole <a> line. -->
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 2 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/project-2.png" alt="Screenshot of Project 2"
+                            data-placeholder="Add screenshot: images/project-2.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Cesista_Gerero_Gutlay_lab_SyntaxSemantics</h3>
+                            <p>This is a syntax and semantics laboratory project that involves parsing logic, stricture flowcharts, and rigorous testing documentation. It is designed to analyze grammar rule and program execution flow using a Python-based parser and structured test cases.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Python-based parser script for syntax and semantics processing</li>
+                                <li>Detailed system architecture and logic visualization</li>
+                                <li>Comprehensive test cases and structured reflection documentation</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Draw.io</span>
+                                <span class="tag">Markdown</span>
+                            </div>
+                            <h4>What I learned</h4>
+                            <p>I learned how to implement syntax and semantics analysis rules programmitically, structure complex test cases for validation, and map out application logic using detailed flowcharts.</p>
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 3 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/project-3.png" alt="Screenshot of Project 3"
+                            data-placeholder="Add screenshot: images/project-3.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Sorsu-Lost-and-Found-Management-System</h3>
+                            <p>This is a campus lost and found management system designed to help students and staff track, report, and recover missing items efficiently. It features a comprehensive backend and front-end interface including dashboards, item reporting pages, and search forms.</p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>User dashboard and management interfaces</li>
+                                <li>Item tracking and recovery lists</li>
+                                <li>Dedicated backend structure and form handling</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">javaScript</span>
+                                <span class="tag">Backend Services</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>I learned how to structure a full-stack application with separate front-end views and back-end logic, implement system dashboards, and organize scalable code directories for real-world institutional platforms.</p>
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== C. CERTIFICATES ===================== -->
+        <section id="certificates" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Certificates</h2>
+                <p class="section-note reveal">
+                    A collection of certificates vallidating my technical skills, academic training, and continous learning.
+                   
+                </p>
+
+                <div class="card-grid">
+
+                    <!-- CERTIFICATE 1 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <!-- Clicking this button opens the large image viewer -->
+                        <button type="button" class="cert-thumb" data-full="images/certificate-1.png"
+                            data-caption="[Certificate 1 Title] - [Platform]"
+                            aria-label="Open certificate 1 in a larger view">
+                            <img src="images/certificate-1.png" alt="Certificate 1 image"
+                                data-placeholder="Add certificate: images/certificate-1.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>Introduction to HTML</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> February 21, 2025</p>
+                            <!-- EDIT: paste your real certificate link in href and delete "is-placeholder" -->
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 2 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <button type="button" class="cert-thumb" data-full="images/certificate-2.png"
+                            data-caption="[Certificate 2 Title] - [Platform]"
+                            aria-label="Open certificate 2 in a larger view">
+                            <img src="images/certificate-2.png" alt="Certificate 2 image"
+                                data-placeholder="Add certificate: images/certificate-2.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>Introduction to javaScript</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> February 25, 2025</p>
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 3 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <button type="button" class="cert-thumb" data-full="images/certificate-2.png"
+                            data-caption="[Certificate 3 Title] - [Platform]"
+                            aria-label="Open certificate 3 in a larger view">
+                            <img src="images/certificate-3.png" alt="Certificate 3 image"
+                                data-placeholder="Add certificate: images/certificate-3.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>Introduction to CSS</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> February 23, 2025</p>
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- TIP: To add more certificates, copy one whole <article> block above and paste it here. Change the image name too. -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== D. OJT / INTERNSHIP ===================== -->
+        <section id="ojt" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">OJT / Internship Experience</h2>
+                <p class="section-note reveal">
+                     A summary of my hands-on industry experience, administrative support tasks, and practical learning during my internship.
+                   
+                </p>
+
+                <article class="card ojt-card reveal">
+                    <div class="ojt-info">
+                        <h3>Bulan National High School</h3>
+                        <p class="meta"><strong>Role / Department:</strong> Registrar Office</p>
+                        <p class="meta"><strong>Dates / Total Hours:</strong> July 2, 2026 - August 5, 2026 and 186hrs</p>
+
+                        <h4>Tasks and Responsibilities</h4>
+                        <ul>
+                            <li>Assisting Visitors</li>
+                            <li>Data encoding</li>
+                            <li>Organizing filing systems</li>
+                            <li>Photocopying documents</li>
+                            <li>Organizing student records</li>
+                        </ul>
+
+                        <h4>Skills Learned</h4>
+                        <div class="tags">
+                            <span class="tag">Data Entry</span>
+                            <span class="tag">Administrative Assistance</span>
+                            <span class="tag">Record Management</span>
+                            <span class="tag">Customer Service</span>
+                            <span class="tag">Document Organization</span>
+                        </div>
+
+                        <a href="#ojt" class="btn btn-small is-placeholder">View OJT Certificate</a>
+                    </div>
+
+                    <div class="ojt-cert">
+                        <button type="button" class="cert-thumb" data-full="images/ojt-certificate.png"
+                            data-caption="OJT Certificate" aria-label="Open OJT certificate in a larger view">
+                            <img src="images/ojt-certificate.png" alt="OJT certificate image"
+                                data-placeholder="Add certificate: images/ojt-certificate.png" width="600" height="420">
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== E. SKILLS ===================== -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Skills</h2>
+                <p class="section-note reveal">
+                    A comprehensive breakdown of my technical expertise, development tools, and core competencies in computer science.
+                    
+                </p>
+
+                <div class="skills-grid">
+
+                    <div class="card skill-group reveal">
+                        <h3>Programming Languages &amp; Web Development</h3>
+                        <div class="badges">
+                            <span class="badge badge-blue">HTML</span>
+                            <span class="badge badge-blue">CSS</span>
+                            <span class="badge badge-blue">JavaScript</span>
+                            <span class="badge badge-purple">Python</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Database &amp; Development Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Database Basics</span>
+                            <span class="badge badge-teal">SQL / MySQL</span>
+                            <span class="badge badge-blue">Git</span>
+                            <span class="badge badge-blue">GitHub</span>
+                            <span class="badge badge-blue">VS Code</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Productivity Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-purple">Microsoft Word</span>
+                            <span class="badge badge-purple">Microsoft Excel</span>
+                            <span class="badge badge-purple">Microsoft PowerPoint</span>
+                            <span class="badge badge-purple">Google Workspace</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Soft Skills</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Teamwork</span>
+                            <span class="badge badge-teal">Communication</span>
+                            <span class="badge badge-teal">Problem-Solving</span>
+                            <span class="badge badge-teal">Time Management</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== F. CONTACT ===================== -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Contact Me</h2>
+
+                <div class="contact-grid">
+
+                    <div class="card contact-info reveal">
+                        <h3>Let's connect</h3>
+                        <p>Send me a message or find me on these sites.</p>
+                        <ul class="contact-list">
+                            <!-- EDIT: change the email address -->
+                            <li><strong>Email:</strong> <a id="myEmail"
+                                    href="mailto:merrsa.gutlay@sorsu.edu.ph">merrsa.gutlay@sorsu.edu.ph</a></li>
+                            <!-- EDIT: put your real profile links in href and delete "is-placeholder" -->
+                            <li><strong>GitHub:</strong> <a href="#contact" class="is-placeholder">https://github.com/merrsagutlay
+                                    profile link</a></li>
+                            <li><strong>LinkedIn:</strong> <a href="#contact" class="is-placeholder">www.linkedin.com/in/merrsa-gutlay-a2414544a
+                                    profile link</a></li>
+                            <li><strong>FB:</strong> <a href="#contact" class="is-placeholder">https://web.facebook.com/merrsa.gutlay/?_rdc=1&_rdr#
+                                    social media link</a></li>
+                            <li><strong></strong></li>
+                        </ul>
+                    </div>
+
+                    <form class="card contact-form reveal" id="contactForm" action="#" method="get">
+                        <h3>Send a message</h3>
+
+                        <div class="form-group">
+                            <label for="name">Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <p class="error" id="nameError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <p class="error" id="emailError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <p class="error" id="messageError" role="alert"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Check My Message</button>
+
+                        <!-- The result message appears here -->
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+                        <noscript>
+                            <p class="form-note">JavaScript is turned off, so this form cannot work. Please use the
+                                email link instead.</p>
+                        </noscript>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <!-- The year is added automatically by JavaScript. The text 2026 is only shown if JavaScript is off. -->
+            <p>&copy; <span id="year">2026</span> Merrsa Gutlay. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#contact" class="is-placeholder">GitHub</a>
+                <a href="#contact" class="is-placeholder">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+    <!-- Small message box shown when a placeholder link is clicked -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Image viewer (modal) for certificates -->
+    <div class="modal" id="imageModal" hidden role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+        <div class="modal-body">
+            <img id="modalImage" alt="">
+            <p class="modal-missing" id="modalMissing" hidden>This image was not found. Add the file to the images
+                folder.</p>
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <!-- Link to our JavaScript file (at the end so the page loads first) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
